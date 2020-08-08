@@ -1,0 +1,136 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  --main-color: coral;
+}
+
+.navbar {
+  background-color: var(--main-color);
+}
+.navbar__left {
+  font-weight: bold;
+}
+.navbar__right {
+  text-align: right;
+}
+
+.profile-card {
+  margin: 40px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+}
+
+.profile-card-top {
+  padding: 10px;
+}
+
+.profile-card-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-card-left__photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.profile-card-right {
+  text-align: center;
+  padding: 50px;
+}
+.profile-card-right__name {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+.profile-card-right__title {
+  font-size: 2rem;
+  color: #505160;
+}
+
+.profile-card-bottom {
+  padding: 40px 80px;
+  line-height: 1.5;
+  color: black;
+}
+
+.about-me {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.profile-card-intro {
+  font-size: 1.5rem;
+  color: #505160;
+}
+
+.line {
+  border-top: 14px dotted #C0C0C0;
+  width: 8%;
+  margin: 20px auto;
+}
+
+.section_header {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.resume {
+  margin: 50px;
+}
+
+.resume-item {
+  box-shadow: 1px 1px 0px 0px var(--main-color);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.resume-item__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.services {
+  margin: 50px auto 100px;
+  text-align: center;
+}
+
+.service-item__photo {
+  max-width: 50%;
+  height: auto;
+  margin: 20px;
+}
+.service-item__photo:hover {
+  transform: scale(1.2);
+}
+.service-item__title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #505160;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 20px;
+}
+.footer__copyright {
+  font-size: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin: 20px auto;
+}
+.social-links__item {
+  font-size: 2rem;
+  margin: 8px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
