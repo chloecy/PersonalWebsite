@@ -1,10 +1,49 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
 body {
   margin: 0px;
   padding: 0px;
   background-color: white;
   --main-color: coral;
 }
-
 
 .navbar {
   background-color: var(--main-color);
@@ -31,8 +70,8 @@ body {
 
 .profile-card-left {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
   &__photo {
     display: block;
@@ -44,50 +83,93 @@ body {
 
 .profile-card-right {
   text-align: center;
-  padding: 50px;
 
   &__name {
-    font-size: 4rem;
+    font-weight: 600;
     color: var(--main-color);
+    @include sm {
+      font-size: 2rem;
+    }
+    @include md {
+      font-size: 3rem;
+    }
+    @include lg {
+      font-size: 4rem;
+    }
   }
 
   &__title {
-    font-size: 2rem;
     color: #505160;
+    @include sm {
+      font-size: 1.5rem;
+    }
+    @include md {
+      font-size: 2rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
   }
 }
 
 .profile-card-bottom {
-  padding: 40px 80px;
+  max-width: 80%;
   line-height: 1.5;
   color: black;
+  margin: 20px auto;
 }
 
 
 .about-me {
-  font-size: 2rem;
+  font-weight: 600;
   color: var(--main-color);
+  @include sm {
+    font-size: 1.5rem;
+  }
+  @include md {
+    font-size: 2rem;
+  }
+  @include lg {
+    font-size: 2rem;
+  }
 }
 
 .profile-card-intro {
-  font-size: 1.5rem;
   color: #505160;
+  @include sm {
+    font-size: 1rem;
+  }
+  @include md {
+    font-size: 1.5rem;
+  }
+  @include lg {
+    font-size: 1.5rem;
+  }
 }
 
 .line {
-  border-top: 14px dotted #C0C0C0;
-  width: 8%;
+  border-top: 16px dotted rgb(235, 235, 235);
   margin: 20px auto;
+  width: 20%;
 }
 
 .section_header {
-  font-size: 2rem;
   color: var(--main-color);
+  font-weight: 600;
   margin-bottom: 20px;
+  @include sm {
+    font-size: 1.5rem;
+  }
+  @include md {
+    font-size: 2rem;
+  }
+  @include lg {
+    font-size: 2rem;
+  }
 }
 
 .resume {
-  margin: 50px;
+  margin: 50px 20px;
 }
 
 .resume-item {
@@ -96,8 +178,21 @@ body {
   margin-bottom: 20px;
   
   &__title {
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 500;
+    color: #505160;
+    @include sm {
+      font-size: 1.5rem;
+    }
+    @include md {
+      font-size: 1.5rem;
+    }
+    @include lg {
+      font-size: 1.5rem;
+    }
+  }
+  &__details {
+    font-size: 1rem;
+    color: grey;
   }
 }
 
@@ -108,18 +203,31 @@ body {
 
 .service-item {
   &__photo {
-    max-width: 50%;
-    height: auto;
     margin: 20px;
+    max-width: 35%;
+    height: auto;
     &:hover {
       transform: scale(1.2);
     }
   }
 
   &__title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #505160
+    font-weight: 500;
+    color: #505160;
+    @include sm {
+      font-size: 1.5rem;
+    }
+    @include md {
+      font-size: 2rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+
+  &__details {
+    font-size: 1rem;
+    color: grey;
   }
 }
 
